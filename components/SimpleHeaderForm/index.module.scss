@@ -1,0 +1,23 @@
+@import "../../components/general";
+@import "../../components/mixins";
+@import "../../components/variables";
+
+.headerClave {
+	width: 100%;
+	text-align: center;
+
+	.horizontal {
+		background: $blue;
+
+		@include shadow-1(0.1);
+
+		margin-bottom: 15px;
+	}
+
+	.logoHorizontal {
+		img {
+			margin: 20px auto;
+			max-width: 250px;
+		}
+	}
+}

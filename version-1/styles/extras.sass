@@ -1,0 +1,86 @@
+.custom-toggler.navbar-toggler
+	border-color: lightgreen!important
+.custom-toggler .navbar-toggler-icon
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 128, 0, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important
+a.help-tool
+	// display: flex
+	position: absolute
+	right: 45px
+	top: -5px
+	z-index: 999
+	// padding: 5px
+	i
+		color: $yellow!important
+		font-size: 18px
+		padding: 5px
+//reset bootstrap
+.btn:focus, .btn:active
+	outline: none !important
+	box-shadow: none !important
+//jquery wizard
+.step-app
+	&>.step-content
+		border: 1px solid transparent!important
+		padding: 0px!important
+	// text-align: center
+.step-steps
+	margin-top: 30px!important
+	margin-bottom: 40px!important
+.step-footer
+	margin-top: 20px
+	text-align: center
+	button
+		width: auto!important
+		font-size: 14px
+	button.btn-primary:last-child
+		margin-bottom: 20px!important
+.step-app > .step-steps > li.active a
+	background-color: $yellow!important
+	@media (max-width: $device-big)
+		text-align: center!important
+
+
+.step-app > .step-steps > li
+	text-align: center!important
+	// @media (min-width: $device-big)
+	&:first-child
+		margin-left: 0!important
+	&:last-child
+		margin-right: 0!important
+	margin: 0 5px
+	box-sizing: border-box
+	
+.step-app > .step-steps > li.done a
+	background-color: #09B8A9!important
+
+.step-app > .step-steps > li > a
+	
+	border-radius: 4px
+	@media (max-width: $device-big)
+		padding-right: 0px!important
+
+
+.step-app > .step-steps > li > a > .number
+	background: #fff
+	padding: 0 8px
+	display: inline-block
+	text-align: center
+	margin-right: 15px
+	@media (max-width: $device-big)
+		margin-right: 8px!important
+	border-radius: 50%!important
+	color: #333
+	@include shadow-1(0.2)
+
+.timer
+	padding: 5px 15px
+	background: $blue
+	color: #fff
+	border-radius: 12px
+	position: absolute
+	display: inline
+	width: auto
+	font-size: 14px
+	top: -20px
+	right: 50px
+	@include shadow-1(0.3)

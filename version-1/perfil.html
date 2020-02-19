@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/content.css">
+	<title>Inicio - Inversiones la Cruz</title>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+		<div class="d-flex flex-grow-1">
+			<span class="w-100 d-lg-none d-block">
+				<!-- hidden spacer to center brand on mobile --></span>
+			<a class="navbar-brand  d-lg-inline-block" href="index.html">
+				<img src="images/logo-h.png" alt="">
+			</a>
+
+			<a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+				<!-- <img src="https://placehold.it/40?text=LOGO" alt="logo"> -->
+			</a>
+			<div class="w-100 text-right d-flex">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- <button class="navbar-toggler hidden-lg-up collapsed" type="button" data-toggle="collapse"
+					data-target="#myNavbar" aria-expanded="false">
+					<span class="hamburguesa">
+						☰
+					</span>
+				</button> -->
+			</div>
+		</div>
+		<div class="collapse navbar-collapse flex-grow-1" id="myNavbar">
+			<ul class="navbar-nav ml-auto flex-nowrap">
+				<li class="nav-item">
+					<a href="dashboard.html" class="nav-link m-1 menu-item">Inicio</a>
+				</li>
+				<li class="nav-item">
+					<a href="perfil.html" class="nav-link m-1 menu-item">Mi Perfil</a>
+				</li>
+
+				<li class="nav-item">
+					<a href="dashboard.html" class="nav-link m-1 menu-item nav-active">Pignocash</a>
+				</li>
+				<li class="nav-item">
+					<a href="index.html" class="nav-link m-1 menu-">Cerrar sesión</a>
+				</li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="offset-lg-3 col-lg-6">
+				<div class="box">
+
+					<div id="demo">
+						<div class="step-app">
+							<ul class="step-steps" style="display:none;">
+								<li>
+									<a href="#tab1">
+										<span class="number">1</span>
+										<span class="name-number"> Total a
+											disponer
+										</span>
+									</a>
+								</li>
+							</ul>
+							<div class="step-content">
+								<div class="step-tab-panel" id="tab1">
+									<form name="frmPerfil" id="frmPerfil">
+										<div class="title-area text-center">
+											<h2>Mi perfil</h2>
+										</div>
+
+										<div class="form-group">
+											<label for="system-id">DNI/Carnet de extranjería</label>
+											<i class="fas fa-id-card"></i>
+											<input type="number" class="form-control" id="system-id"
+												placeholder="Ejemplo: 09738573" pattern="/^-?\d+\.?\d*$/"
+												onKeyPress="if(this.value.length==8) return false;" value="78823821"
+												disabled>
+										</div>
+
+										<div class="form-group">
+											<label for="phone">Celular</label>
+											<input type="number" class="form-control" id="phone"
+												placeholder="Ejemplo: 987785643" value="98787328"
+												pattern="/^-?\d+\.?\d*$/"
+												onKeyPress="if(this.value.length==9) return false;" disabled>
+											<i class="fas fa-phone-alt"></i>
+										</div>
+
+										<div class="form-group">
+											<label for="banco-nombre">Banco:</label>
+											<i class="fas fa-university"></i>
+											<input class="form-control" id="banco-nombre" disabled value="BBVA">
+										</div>
+
+										<div class="form-group">
+											<label for="numero-cuenta">Número de cuenta:</label>
+											<i class="fas fa-piggy-bank"></i>
+											<input type="text" class="form-control" id="numero-cuenta"
+												name="numero-cuenta" value="194123287738287" disabled>
+										</div>
+
+										<div class="form-group">
+											<label for="password">Nueva clave:</label>
+											<i class="fas fa-key"></i>
+											<input type="password" class="form-control" id="password" name="password"
+												required>
+										</div>
+
+										<div class="form-group">
+											<label for="re-password">Confirma tu nueva clave:</label>
+											<i class="fas fa-key"></i>
+											<input type="password" class="form-control" name="re-password"
+												id="re-password" required>
+										</div>
+										<div class="button-container small">
+											<button type="button" class="btn btn-primary negative" data-toggle="modal"
+												data-target="#reSendSms">
+												Enviar Código SMS <i class="fas fa-mobile-alt"></i>
+											</button>
+										</div>
+										<div class="form-group">
+											<label for="sms-code">Código SMS</label>
+											<input type="number" class="form-control" id="sms-code"
+												placeholder="Ejemplo: 55434" pattern="/^-?\d+\.?\d*$/"
+												onKeyPress="if(this.value.length==5) return false;" required>
+											<i class="fas fa-sms"></i>
+											<small id="help-chequeo" class="form-text text-muted">
+												Escribe el código SMS que te hemos enviamos<br>
+												<a href="#" data-toggle="modal" data-target="#reSendSms">(Si no te
+													llegó el código, click aquí
+													<!-- <i class="far fa-hand-pointer"></i>  -->
+													para
+													volver
+													a
+													enviar)</a>
+											</small>
+										</div>
+										<!-- <div class="button-container">
+											<a href="felicidades-cambio-perfil.html">
+												<button type="button" class="btn btn-primary">
+													Actualizar Perfil
+													<i class="fas fa-arrow-right"></i>
+												</button>
+											</a>
+										</div> -->
+									</form>
+								</div>
+							</div>
+
+							<div class="step-footer">
+
+								<button class="btn btn-primary" data-direction="finish">Actualizar Perfil
+									<i class="fas fa-arrow-right"></i> </button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container" name="modal-group">
+					<div class="row">
+						<!-- Modal SMS Reenviado -->
+						<div class="modal fade" id="reSendSms" tabindex="-1" role="dialog"
+							aria-labelledby="reSendSmsTitle" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-scrollable" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="reSendSmsTitle">
+											Dígito de verificación</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<p>
+											El <strong>SMS</strong> (Mensaje de Texto) con el código de
+											verificación,
+											fue reenviado correctamente.
+										</p>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary" data-dismiss="modal">Entendido
+											<i class="fas fa-check"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Modal SMS -->
+						<!-- Modal detalles -->
+						<div class="modal fade" id="detalles-banco" tabindex="-1" role="dialog"
+							aria-labelledby="detalles-bancoTitle" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-scrollable" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="detalles-bancoTitle">
+											Cálculos realizados</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<div class="form-group">
+											<label for="valor-disponer">Saldo capital:</label>
+											<i class="far fa-money-bill-alt"></i>
+											<input type="text" class="form-control" id="valor-disponer" value="1000"
+												disabled>
+										</div>
+										<div class="form-group">
+											<label for="valor-disponer">Interés a la fecha:</label>
+											<i class="far fa-money-bill-alt"></i>
+											<input type="text" class="form-control" id="valor-disponer" value="500"
+												disabled>
+										</div>
+										<div class="form-group">
+											<label for="valor-disponer">Capital Mínimo:</label>
+											<i class="far fa-money-bill-alt"></i>
+											<input type="text" class="form-control" id="valor-disponer" value="30"
+												disabled>
+										</div>
+										<hr>
+										<div class="form-group">
+											<label for="valor-disponer">Nuevo Saldo
+												:</label>
+											<i class="far fa-money-bill-alt"></i>
+											<input type="text" class="form-control" id="valor-disponer" value="470"
+												disabled>
+										</div>
+										<div class="form-group">
+											<label for="valor-disponer">Capital Mínimo + Pagado:</label>
+											<i class="far fa-money-bill-alt"></i>
+											<input type="text" class="form-control" id="valor-disponer" value="30"
+												disabled>
+										</div>
+										<div class="form-group">
+											<label for="valor-disponer">ITF:</label>
+											<i class="far fa-money-bill-alt"></i>
+											<input type="text" class="form-control" id="valor-disponer" value="0.05"
+												disabled>
+										</div>
+										<hr>
+										<div class="form-group">
+											<label for="valor-disponer">Monto Depósito
+												:</label>
+											<i class="far fa-money-bill-alt"></i>
+											<input type="text" class="form-control" id="valor-disponer" value="499.95"
+												disabled>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary" data-dismiss="modal">Entendido
+											<i class="fas fa-check"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End modal detalles -->
+
+					</div>
+				</div>
+				<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+					integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+					crossorigin="anonymous">
+				</script>
+
+				<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+					integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+					crossorigin="anonymous">
+				</script>
+				<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+					integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+					crossorigin="anonymous">
+				</script>
+
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js">
+				</script>
+				<script src="node_modules/jquery.steps/dist/jquery-steps.min.js"></script>
+				<script>
+					$.extend($.validator.messages, {
+						required: "* Este campo debe de ser completado"
+					});
+				</script>
+				<script>
+					var frmInfo = $('#frmPerfil');
+					var frmInfoValidator = frmInfo.validate();
+
+					$('#demo').steps({
+
+						onChange: function (currentIndex, newIndex, stepDirection) {
+							// step1
+							if (currentIndex === 0) {
+								if (stepDirection === 'forward') {
+									return frmInfo.valid();
+								}
+								if (stepDirection === 'backward') {
+									frmInfoValidator.resetForm();
+								}
+							}
+
+							return true;
+						},
+						onFinish: function () {
+							window.location.href = 'felicidades-cambio-perfil.html';
+						}
+					});
+				</script>
+
+</body>
+
+</html>

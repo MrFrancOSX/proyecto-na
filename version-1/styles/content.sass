@@ -1,0 +1,99 @@
+@import main.sass
+body, html
+	background-attachment: fixed
+	min-height: 100%
+body
+	background-image: url(../images/test.jpg)
+	@include bg-center
+	padding-top: 85px!important
+	margin-bottom: 35px!important
+	@media (min-width: $device-big)
+		padding-top: 110px!important
+nav
+	background: $blue
+	@include shadow-1(0.1)
+	ul li.nav-item
+		margin: 0px 10px!important
+		&:last-child
+			margin-right: 0px!important
+	ul li a
+		font-weight: 600
+		color: #fff!important
+		
+		&:hover
+			color: $yellow!important
+	a.navbar-brand
+		img
+			width: 240px
+			@media (min-width: $medium)
+				width: 300px
+	//boton hamburguer
+	.navbar-toggler
+		// padding: 8px 15px 6px 15px
+		font-size: 18px	
+		color: #fff!important
+		border-color: #fff!important
+		transition: 50ms cubic-bezier(.17,.67,.83,.67)
+		&:hover, &:focus
+			color: #fff!important
+			background: $yellow
+			border-color: $yellow!important
+			outline: none
+.error
+	color: $alert!important
+.name-number
+	display: none
+	@media (min-width: $device-big)
+		display: inline
+
+small.hint
+	display: none
+	line-height: 140%!important
+	@media (max-width: $medium)
+		display: block
+		i
+			color: $yellow
+			
+.table-responsive-1
+	width: 95%
+.table-responsive-2
+	width: 80%
+	margin-top: 20px!important
+.table-responsive
+	margin: 5px auto 5px
+	table
+		color: rgba(0,0,0,0.7)
+		tbody
+			th, td
+				font-weight: normal
+				// padding-top: 10px
+				// padding-bottom: 10px
+				a, button
+					border: none
+					color: rgba(0,0,0,0.89)!important
+					@include shadow-1(0.04)
+					border-radius: 6px
+					background: #fff
+					padding: 6px 12px
+					@media (max-width: $device-big)
+						font-size: 16px
+					&:hover
+						color: $yellow!important
+						@include shadow-1(0.12)
+					i
+						color: $yellow!important
+				button
+					position: relative
+					top: -5px
+					outline: none
+		tr
+			&:hover
+				background: rgba(247,182,10,0.04)
+		&.table
+			.thead-dark th
+				background: #fff
+				border-bottom-color: #ddd
+				color: $blue
+				border-top: none
+				@media (max-width: $normal)
+					min-width: 180px!important

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/content.css">
+	<link rel="stylesheet" href="node_modules/jquery.steps/dist/jquery-steps.css">
+	<title>Inicio - Inversiones la Cruz</title>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+		<div class="d-flex flex-grow-1">
+			<span class="w-100 d-lg-none d-block">
+				<!-- hidden spacer to center brand on mobile --></span>
+			<a class="navbar-brand  d-lg-inline-block" href="index.html">
+				<img src="images/logo-h.png" alt="">
+			</a>
+
+			<a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+				<!-- <img src="https://placehold.it/40?text=LOGO" alt="logo"> -->
+			</a>
+			<div class="w-100 text-right d-flex">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- <button class="navbar-toggler hidden-lg-up collapsed" type="button" data-toggle="collapse"
+					data-target="#myNavbar" aria-expanded="false">
+					<span class="hamburguesa">
+						☰
+					</span>
+				</button> -->
+			</div>
+		</div>
+		<div class="collapse navbar-collapse flex-grow-1" id="myNavbar">
+			<ul class="navbar-nav ml-auto flex-nowrap">
+				<li class="nav-item">
+					<a href="dashboard.html" class="nav-link m-1 menu-item">Inicio</a>
+				</li>
+				<li class="nav-item">
+					<a href="perfil.html" class="nav-link m-1 menu-item">Mi Perfil</a>
+				</li>
+
+				<li class="nav-item">
+					<a href="dashboard.html" class="nav-link m-1 menu-item nav-active">Pignocash</a>
+				</li>
+				<li class="nav-item">
+					<a href="index.html" class="nav-link m-1 menu-">Cerrar sesión</a>
+				</li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+
+		<div class="row align-items-center">
+			<div class="offset-lg-1 col-lg-10 col-md-12">
+				<div class="timer">
+					Tiempo de expiración <i class="fas fa-clock"></i> <span class="countdown"></span>
+				</div>
+				<!-- <div class="countdown"></div> -->
+				<div class="box">
+					<div class="title-area text-center">
+						<h2>Obtén tu crédito en 3 simples pasos</h2>
+					</div>
+					<div id="demo">
+						<div class="step-app">
+							<ul class="step-steps">
+								<li><a href="#tab1"><span class="number">1</span> <span class="name-number"> Total a
+											disponer
+										</span></a></li>
+								<li><a href="#tab2"><span class="number">2</span> <span class="name-number"> Banco y
+											cuenta
+										</span></a></li>
+								<li><a href="#tab3"><span class="number">3</span> <span class="name-number"> Paso final
+										</span></a></li>
+							</ul>
+							<div class="step-content">
+								<div class="step-tab-panel" id="tab1">
+									<div class="table-responsive table-responsive-1">
+										<table class="table">
+											<thead class="thead-dark text-center">
+												<tr>
+													<th scope="col">Opción</th>
+													<th scope="col">Crédito</th>
+													<!-- <th scope="col">Monto disponible S/</th> -->
+													<th scope="col">Monto depósito S/</th>
+													<th scope="col">Detalles</th>
+												</tr>
+											</thead>
+											<tbody class="text-center">
+												<tr>
+													<th scope="row">
+														<a href="#">
+															<i class="far fa-check-circle"></i>
+															Seleccionar
+														</a>
+													</th>
+
+													<td>A000023318321128</td>
+													<!-- <td>1550</td> -->
+													<td>1450</td>
+													<td>
+														<button role="button" data-toggle="modal"
+															data-target="#detalles-banco">
+															<i class="fas fa-info-circle"></i>
+														</button>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														<a href="#">
+															<i class="far fa-check-circle"></i>
+															Seleccionar
+														</a>
+													</th>
+													<td>A000023318321129</td>
+													<!-- <td>1200</td> -->
+													<td>1100</td>
+													<td>
+														<button role="button" data-toggle="modal"
+															data-target="#detalles-banco">
+															<i class="fas fa-info-circle"></i>
+														</button>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														<a href="#">
+															<i class="far fa-check-circle"></i>
+															Seleccionar
+														</a>
+													</th>
+													<td>A000023318321130</td>
+													<!-- <td>1800</td> -->
+													<td>1790</td>
+													<td>
+														<button role="button" data-toggle="modal"
+															data-target="#detalles-banco">
+															<i class="fas fa-info-circle"></i>
+														</button>
+													</td>
+												</tr>
+
+											</tbody>
+										</table>
+									</div>
+									<small class="hint">
+										<i class="fas fa-info-circle"></i>
+										Puedes completar la visualización arrastrando la tabla con el dedo hacia la
+										derecha <i class="far fa-hand-point-right"></i>
+									</small>
+
+									<div class="table-responsive table-responsive-2">
+										<table class="table text-center">
+											<thead class="thead-dark text-center">
+												<tr>
+													<th scope="col">Opción</th>
+													<th scope="col">Crédito</th>
+													<th scope="col">Monto Depósito S/</th>
+												</tr>
+											</thead>
+											<tbody class="text-center">
+												<tr>
+													<th scope="row">
+														<a href="#">
+															<i class="far fa-trash-alt"></i>
+															Eliminar
+														</a>
+													</th>
+													<td>A000023318321128</td>
+													<td>1550</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														<a href="#">
+															<i class="far fa-trash-alt"></i>
+															Eliminar
+														</a>
+													</th>
+													<td>A000023318321129</td>
+													<td>1200</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														<a href="#">
+															<i class="far fa-trash-alt"></i>
+															Eliminar
+														</a>
+													</th>
+													<td>A000023318321130</td>
+													<td>1800</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<div class="offset-lg-4 col-lg-4">
+										<div class="form-group">
+											<label for="valor-disponer">Total a disponer:</label>
+											<i class="far fa-money-bill-alt"></i>
+											<input type="text" class="form-control" id="valor-disponer"
+												value="S/ 950.00" disabled>
+										</div>
+									</div>
+								</div>
+								<div class="step-tab-panel" id="tab2">
+
+									<form name="frmInfo" id="frmInfo">
+										<div class="offset-lg-3 col-lg-6">
+											<div class="form-group">
+												<label for="celular-usuario">Celular:</label>
+												<i class="fas fa-mobile-alt"></i>
+												<input type="text" class="form-control" id="celular-usuario"
+													value="987786751" disabled>
+											</div>
+
+											<div class="form-group">
+												<label for="correo-usuario">Correo:</label>
+												<i class="fas fa-at"></i>
+												<input type="email" class="form-control" id="correo-usuario"
+													value="persona@ilc.com" disabled>
+											</div>
+											<div class="form-group">
+												<label for="banco-nombre">Banco:</label>
+												<i class="fas fa-university"></i>
+												<select class="form-control custom-select" id="banco-nombre" required>
+													<option value="" selected>Escoge el banco</option>
+													<option value="bcp">BCP</option>
+													<option value="interbank">Interbank</option>
+													<option value="bbva">BBVA</option>
+													<option value="scotiabank">Scotiabank</option>
+												</select>
+											</div>
+											<div class="form-group">
+												<label for="banco-nombre">Tipo de cuenta:</label>
+												<i class="fas fa-university"></i>
+												<select class="form-control custom-select" id="banco-nombre" required>
+													<option value="" selected>Escoge el tipo de cuenta</option>
+													<option value="ahorros">Cuenta de ahorros</option>
+													<option value="maestra">Cuenta maestra</option>
+												</select>
+											</div>
+											<div class="form-group">
+												<label for="numero-cuenta">Número de cuenta:</label>
+												<i class="fas fa-piggy-bank"></i>
+												<input type="text" class="form-control" id="numero-cuenta"
+													name="numero-cuenta" placeholder="Ejemplo: 198398712398" required>
+											</div>
+											<!-- <input type="text"  required> -->
+
+										</div>
+
+
+										<div class="table-responsive table-responsive-2">
+											<table class="table">
+												<thead class="thead-dark text-center">
+													<tr>
+														<th scope="col">Opción</th>
+														<th scope="col">Banco</th>
+														<th scope="col">Nro de cuenta</th>
+													</tr>
+												</thead>
+												<tbody class="text-center">
+													<tr>
+														<th scope="row">
+															<a href="#">
+																<i class="far fa-check-circle"></i>
+																Seleccionar
+															</a>
+														</th>
+
+														<td>BCP</td>
+														<td>191278368721</td>
+													</tr>
+													<tr>
+														<th scope="row">
+															<a href="#">
+																<i class="far fa-check-circle"></i>
+																Seleccionar
+															</a>
+														</th>
+														<td>Interbank</td>
+														<td>191378368721</td>
+													</tr>
+													<tr>
+														<th scope="row">
+															<a href="#">
+																<i class="far fa-check-circle"></i>
+																Seleccionar
+															</a>
+														</th>
+														<td>BCP</td>
+														<td>191278368728</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</form>
+								</div>
+								<div class="step-tab-panel" id="tab3">
+									<!-- <h3>Tab3</h3> -->
+									<form name="frmLogin" id="frmLogin">
+										<div class="table-responsive table-responsive-2">
+											<table class="table text-center">
+												<thead class="thead-dark text-center">
+													<tr>
+														<th scope="col">Crédito</th>
+														<th scope="col">Monto Depósito S/</th>
+														<th scope="col">Próx. Vencimiento</th>
+													</tr>
+												</thead>
+												<tbody class="text-center">
+													<tr>
+														<th scope="row">
+															A000023318321128
+														</th>
+														<td>1550</td>
+														<td>29/02/2020</td>
+													</tr>
+													<tr>
+														<th scope="row">
+															A000023318321128
+														</th>
+														<td>1550</td>
+														<td>29/02/2020</td>
+													</tr>
+													<tr>
+														<th scope="row">
+															A000023318321128
+														</th>
+														<td>1550</td>
+														<td>29/02/2020</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<div class="offset-lg-3 col-lg-6">
+											<hr>
+
+											<form name="frmSms" id="frmSms">
+												<div class="form-group">
+													<label for="total-abonar">Total a Abonar:</label>
+													<i class="far fa-money-bill-alt"></i>
+													<input type="text" class="form-control" id="total-abonar"
+														value="950.00" disabled>
+												</div>
+												<div class="form-group">
+													<label for="banco-nombre">Banco:</label>
+													<i class="fas fa-university"></i>
+													<input type="text" class="form-control" id="banco-nombre"
+														value="BCP" disabled>
+												</div>
+												<div class="form-group">
+													<label for="numero-cuenta">Número de cuenta:</label>
+													<i class="fas fa-piggy-bank"></i>
+													<input type="text" class="form-control" id="numero-cuenta"
+														value="19832137286387" disabled>
+												</div>
+												<div class="form-group">
+													<label for="celular-usuario">Celular:</label>
+													<i class="fas fa-mobile-alt"></i>
+													<input type="text" class="form-control" id="celular-usuario"
+														value="987786751" disabled>
+												</div>
+
+												<div class="form-group">
+													<label for="correo-usuario">Correo:</label>
+													<i class="fas fa-at"></i>
+													<input type="text" class="form-control" id="correo-usuario"
+														value="persona@ilc.com" disabled>
+												</div>
+
+												<div class="button-container small">
+													<button type="button" class="btn btn-primary negative"
+														data-toggle="modal" data-target="#reSendSms">
+														Enviar Código SMS <i class="fas fa-mobile-alt"></i>
+													</button>
+												</div>
+
+												<div class="form-group">
+													<label for="sms-code">Código SMS</label>
+													<input type="number" class="form-control" id="sms-code"
+														placeholder="Ejemplo: 55434" pattern="/^-?\d+\.?\d*$/"
+														onKeyPress="if(this.value.length==5) return false;" required>
+													<i class="fas fa-sms"></i>
+													<small id="help-chequeo-1" class="form-text text-muted">
+														Si no te llegó el SMS, vuelve a presionar el botón en la parte
+														superior "Enviar Código SMS"
+													</small>
+												</div>
+
+												<div class="form-check">
+													<div>
+														<input class="form-check-input" type="checkbox" value=""
+															id="defaultCheck1" name="check-terminos" required
+															width="100%">
+														<label class="form-check-label" for="defaultCheck1">
+															Al dar click, aceptas los <a href="#">términos y
+																condiciones</a>
+														</label>
+													</div>
+
+												</div>
+											</form>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="step-footer">
+								<button class="btn btn-primary negative" data-direction="prev"><i
+										class="fas fa-arrow-left"></i> Anterior</button>
+								<button class="btn btn-primary" data-direction="next">Siguiente <i
+										class="fas fa-arrow-right"></i></button>
+								<button class="btn btn-primary" data-direction="finish">Finalizar <i
+										class="fas fa-check"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="container" name="modal-group">
+		<div class="row">
+			<!-- Modal SMS Reenviado -->
+			<div class="modal fade" id="reSendSms" tabindex="-1" role="dialog" aria-labelledby="reSendSmsTitle"
+				aria-hidden="true">
+				<div class="modal-dialog modal-dialog-scrollable" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="reSendSmsTitle">
+								Dígito de verificación</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p>
+								El <strong>SMS</strong> (Mensaje de Texto) con el código de
+								verificación,
+								fue reenviado correctamente.
+							</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Entendido
+								<i class="fas fa-check"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Modal SMS -->
+			<!-- Modal detalles -->
+			<div class="modal fade" id="detalles-banco" tabindex="-1" role="dialog"
+				aria-labelledby="detalles-bancoTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-scrollable" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="detalles-bancoTitle">
+								Cálculos realizados</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="form-group">
+								<label for="valor-disponer">Saldo capital:</label>
+								<i class="far fa-money-bill-alt"></i>
+								<input type="text" class="form-control" id="valor-disponer" value="1000" disabled>
+							</div>
+							<div class="form-group">
+								<label for="valor-disponer">Interés a la fecha:</label>
+								<i class="far fa-money-bill-alt"></i>
+								<input type="text" class="form-control" id="valor-disponer" value="500" disabled>
+							</div>
+							<div class="form-group">
+								<label for="valor-disponer">Capital Mínimo:</label>
+								<i class="far fa-money-bill-alt"></i>
+								<input type="text" class="form-control" id="valor-disponer" value="30" disabled>
+							</div>
+							<hr>
+							<div class="form-group">
+								<label for="valor-disponer">Nuevo Saldo
+									:</label>
+								<i class="far fa-money-bill-alt"></i>
+								<input type="text" class="form-control" id="valor-disponer" value="470" disabled>
+							</div>
+							<div class="form-group">
+								<label for="valor-disponer">Capital Mínimo + Pagado:</label>
+								<i class="far fa-money-bill-alt"></i>
+								<input type="text" class="form-control" id="valor-disponer" value="30" disabled>
+							</div>
+							<div class="form-group">
+								<label for="valor-disponer">ITF:</label>
+								<i class="far fa-money-bill-alt"></i>
+								<input type="text" class="form-control" id="valor-disponer" value="0.05" disabled>
+							</div>
+							<hr>
+							<div class="form-group">
+								<label for="valor-disponer">Monto Depósito
+									:</label>
+								<i class="far fa-money-bill-alt"></i>
+								<input type="text" class="form-control" id="valor-disponer" value="499.95" disabled>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Entendido
+								<i class="fas fa-check"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End modal detalles -->
+
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+	</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+	<script src="node_modules/jquery.steps/dist/jquery-steps.min.js"></script>
+	<script>
+		var timer2 = "10:01";
+		var interval = setInterval(function () {
+
+
+			var timer = timer2.split(':');
+			//by parsing integer, I avoid all extra string processing
+			var minutes = parseInt(timer[0], 10);
+			var seconds = parseInt(timer[1], 10);
+			--seconds;
+			minutes = (seconds < 0) ? --minutes : minutes;
+			if (minutes < 0) clearInterval(interval);
+			seconds = (seconds < 0) ? 59 :
+				seconds;
+			seconds = (seconds < 10) ? '0' + seconds : seconds; //minutes=(minutes < 10) ? minutes : minutes;
+			$('.countdown').html(minutes + ':' + seconds);
+			timer2 = minutes + ':' + seconds;
+		}, 1000);
+	</script>
+	<script>
+		$.extend($.validator.messages, {
+			required: "* Este campo debe de ser completado"
+		});
+	</script>
+	<script>
+		var frmInfo = $('#frmInfo');
+		var frmInfoValidator = frmInfo.validate();
+
+		var frmLogin = $('#frmLogin');
+		var frmLoginValidator = frmLogin.validate();
+
+		var frmMobile = $('#frmMobile');
+		var frmMobileValidator = frmMobile.validate();
+
+		$('#demo').steps({
+
+			onChange: function (currentIndex, newIndex, stepDirection) {
+				// step1
+				if (currentIndex === 1) {
+					if (stepDirection === 'forward') {
+						return frmInfo.valid();
+					}
+					if (stepDirection === 'backward') {
+						frmInfoValidator.resetForm();
+					}
+				}
+				// step2
+				if (currentIndex === 2) {
+					if (stepDirection === 'forward') {
+						return frmLogin.valid();
+					}
+					if (stepDirection === 'backward') {
+						frmLoginValidator.resetForm();
+					}
+				}
+				// step3
+				if (currentIndex === 3) {
+					if (stepDirection === 'forward') {
+						return frmMobile.valid();
+					}
+					if (stepDirection === 'backward') {
+						frmMobileValidator.resetForm();
+					}
+				}
+				return true;
+			},
+			onFinish: function () {
+				window.location.href = 'felicidades-pignocash.html';
+			}
+		});
+	</script>
+</body>
+
+</html>

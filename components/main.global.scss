@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Halant:300,400,500,600,700&display=swap');
+
+@import "./mixins";
+@import "./variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body, html{
+	height: 100%;
+}
+
+body{
+	width: 100%;
+}
+
+#__next{
+	// min-height: 100%!important;
+	height: 100%;
+}
+/* Remove number arrows on Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* & Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+body{
+	font-family: $font-family!important;
+	padding: 0px;
+	margin: 0px;
+	background: #fafafa;
+	@media (min-width: $device-big){
+
+	}
+	a {
+		@include ease(250ms);
+	}
+	
+	
+}
+
+p{
+	font-family: $font-family;
+	color: rgba(0,0,0,0.79)!important;
+}
+
+
+form{
+    .form-group {
+		position: relative;
+		
+        .fas {
+          position: absolute;
+          top: 42.5px;
+          left: 10px;
+          color: rgba(255, 255, 255, 0.6);
+        }
+        input {
+		  padding-left: 40px;
+			&:focus {
+				border-color: inherit;
+				box-shadow: none;
+			}
+        }
+    }
+}
+
+
+button.btn-primary, a.btn-primary {
+	color: #fff;
+	width: 100%;
+	font-weight: 700;
+	font-size: 16px;
+	background: $yellow;
+	border-radius: 32px;
+	padding: 9px 30px;
+	outline: none !important;
+	border: $yellow;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+
+	@include ease(450ms);
+	@include shadow-1(0.15);
+
+	&:hover, &:active, &:focus {
+		@include shadow-1(0.3);
+
+		background: $yellow-hover !important;
+		border: $yellow-hover;
+		cursor: pointer;
+	}
+
+	&.negative {
+		border-color: $yellow;
+		background: #fdfdfd!important;
+		color: $yellow;
+		&:visited{
+			border-color: $yellow;
+			background: #fdfdfd!important;
+			color: $yellow;
+		}
+		&:hover, &:active, &:focus{
+			color: #fff;
+			background: $yellow!important;
+		}
+		svg{
+			position: relative;
+			top: 0;
+			color: inherit;
+		}
+	}
+
+	&:last-child {
+		margin-bottom: 0px;
+	}
+
+	i.fas, i.far {
+		position: relative;
+
+		&.fa-arrow-right {
+		top: 1.5px;
+		margin-left: 5px;
+		}
+	}
+}
+
+//Bootstrap modals stuff
+
+button{
+
+	&.modalButtonSmall{
+		width: 80%;
+		margin: 25px auto 20px auto!important;
+		display: block;
+	}
+	
+	&.modalText{
+		background: transparent!important;
+		padding: 0!important;
+		width: auto;
+		color: $yellow;
+		font-size: 12.8px;
+		font-weight: 400;
+		letter-spacing: 0px;
+		box-shadow: none!important;
+		margin-bottom: 0px!important;
+		cursor: pointer;
+
+		&:hover, &:focus{
+			background: transparent!important;
+			color: $yellow;
+			box-shadow: none!important;
+		}
+	}
+
+	&.modalIcon{
+		background: transparent!important;
+		width: 0;
+		padding: 0!important;
+		margin-bottom: 0px!important;
+		cursor: pointer;
+
+		position: absolute;
+		right: 40px;
+		top: -0.5px;
+		z-index: 999;
+		font-size: 18px;
+		
+
+		&:hover, &:focus{
+			background: transparent!important;
+			color: $yellow;
+			box-shadow: none!important;
+		}
+		svg{
+			color: $yellow!important;
+			position: relative;
+			right: 0;
+		}
+	}
+}
+
+.modal {
+	.modal-content {
+		width: 100%;
+		background-color: #fff;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-radius: 0.3rem;
+		outline: 0;
+
+		
+
+		.modal-header {
+			// border-bottom: 1px solid rgba(0,0,0,0.05)
+			border-bottom: none;
+			padding-bottom: 0px;
+
+			.modal-title {
+				font-weight: 600 !important;
+				color: $blue;
+				text-align: center;
+				width: 100%;
+				font-size: 20px;
+			}
+
+			.close {
+				outline: none;
+				span {
+					color: $yellow;
+				}
+			}
+		}
+
+		.modal-body {
+			img {
+				width: 100%;
+			}
+			p {
+				font-size: 16px!important;
+				font-weight: 500;
+				color: rgba(0,0,0,0.79);
+			}
+		}
+
+		.modal-footer {
+			border-top: 1px solid rgba(0, 0, 0, 0.05);
+			padding-bottom: 1rem;
+			text-align: center;
+
+			button.btn-primary, a.btn-primary {
+				margin-bottom: 10px;
+				font-size: 14px;
+
+				&:last-child {
+					margin-bottom: 0px;
+				}
+
+			
+				@media (min-width: $device-big) {
+					max-width: 40%;
+					margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}

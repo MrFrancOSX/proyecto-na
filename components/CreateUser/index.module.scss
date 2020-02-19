@@ -1,0 +1,196 @@
+@import "../../components/general";
+@import "../../components/mixins";
+@import "../../components/variables";
+
+body, html{
+	height: 100%!important;
+}
+
+body{
+	width: 100%!important;
+}
+
+
+.box{
+	border-radius: 4px;
+	background: #FFF;
+	padding: 20px 15px;
+	@include shadow-1(0.15);
+	margin-bottom: 20px!important;
+	@media (min-width: $device-big){
+		@include shadow-1(0.19);
+		padding: 30px 30px;
+	}
+}
+
+.titleArea{
+	margin: 20px 0px;
+	h2 {
+		font-weight: 800!important;
+		font-size: 20px;
+		text-transform: uppercase;
+		color: $blue;
+		}
+	}
+
+
+
+
+section.generacionClave, section.congratulations, section.cambioClave{
+	width: 100%;
+
+	@media (min-width: $device-big) {
+		// background-image: url('/static/backgrounds/leaf-real.png');
+		background-image: url("/static/backgrounds/example-2.jpg");
+		@include bg-center;
+		min-height: 100%!important;
+		background-attachment: fixed;
+	}
+
+	.leftSide {
+		@media (min-width: $device-big) {
+			margin-top: 40px;
+			width: 60%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	.headerClave {
+		width: 100%;
+		text-align: center;
+
+		.horizontal {
+			background: $blue;
+
+			@include shadow-1(0.1);
+
+			margin-bottom: 15px;
+    	}
+
+		.logoHorizontal {
+			img {
+				margin: 20px auto;
+				max-width: 250px;
+			}
+		}
+	}
+
+ 	.bodyClave {
+		@media (min-width: $device-big) {
+			width: 420px;
+		}
+
+		.titleArea {
+			@media (min-width: $device-big) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+  	.optionsBottom {
+   		margin-top: 30px;
+		text-align: center;
+	}
+	form{
+		.form-group{
+			position: relative;
+			.form-control {
+				&:focus {
+					border-color: inherit;
+					box-shadow: none;
+				}
+			}
+		}
+
+		label{
+			color: $blue;
+			font-weight: 600;
+		}
+		//componente font awesome
+		svg {
+			position: absolute;
+			top: 42.5px;
+			left: 10px;
+			color: $blue;
+		}
+		.sendButton{
+			// background: #fff;
+			color: #ffffff;
+			position: relative;
+			top: 1.5px;
+			left: 0;
+		}
+
+		small.text-form{
+			color: #6c757d!important;
+		}
+
+		input, select {
+			padding-left: 40px;
+			box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.04) !important;
+			border-color: rgba(0, 0, 0, 0.05);
+
+			&:hover, &:active, &:focus {
+			border-color: $blue !important;
+			}
+
+			&::placeholder {
+			color: rgba(0, 0, 0, 0.6)
+			}
+		}
+
+		
+	}
+
+
+	// form.formPrincipal{
+	// 	width: 100%;
+	// 	.form-group{
+	// 		position: relative;
+
+	// 		.form-control {
+	// 			&:focus {
+	// 				border-color: inherit;
+	// 				box-shadow: none;
+	// 			}
+	// 		}
+
+	// 		//Inicio componentes fontawesome
+	// 		i.fas, i.far {
+	// 			position: absolute;
+	// 			top: 42.5px;
+	// 			left: 10px;
+	// 			color: $blue;
+	// 		}
+
+	// 		//Fin componente fontawesome
+	// 		label.form-label {
+	// 			color: $blue!important;
+	// 			font-weight: 600;
+	// 		}
+
+	// 		input, select {
+	// 			padding-left: 40px;
+	// 			box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.04) !important;
+	// 			border-color: rgba(0, 0, 0, 0.05);
+
+	// 			&:hover, &:active, &:focus {
+	// 			border-color: $blue !important;
+	// 			}
+
+	// 			&::placeholder {
+	// 			color: rgba(0, 0, 0, 0.6)
+	// 			}
+	// 		}
+	// 	}
+
+	// }
+
+
+}
+
+
+
+
